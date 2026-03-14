@@ -1,0 +1,11 @@
+{
+  "greeting": "Hi, my name is",
+  "name": "Adam Silva",
+  "tagline": "Architecting Scalable AI & LLM Solutions",
+  "description": "I'm an AI Engineer specialising in production-grade machine learning systems, LLM fine-tuning, and RAG pipelines. I build intelligent backends that turn unstructured data into measurable business outcomes.",
+  "cta": {
+    "label": "Check out my work",
+    "href": "#projects"
+  },
+  "resumeUrl": "/resume.pdf"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lumina-llm",
+    "title": "LuminaLLM",
+    "featured": true,
+    "description": {
+      "problem": "Off-the-shelf LLMs underperform on domain-specific tasks, and traditional fine-tuning requires expensive high-VRAM hardware that's inaccessible for most practitioners.",
+      "decision": "Built a modular QLoRA + PEFT fine-tuning framework for Llama 3 and Mistral, with 4-bit NF4 quantisation (75% VRAM reduction), Flash Attention 2, paged AdamW, and W&B experiment tracking. Supports Alpaca, ShareGPT, and OpenAI instruction formats out of the box.",
+      "impact": "Enables full fine-tuning runs on a single consumer GPU. Ships with a benchmarking suite (perplexity, ROUGE, LLM-as-judge) and production merge/deployment scripts to take adapters straight to serving."
+    },
+    "techTags": ["Python", "PyTorch", "QLoRA", "PEFT", "Llama 3", "Mistral", "Hugging Face", "W&B", "CUDA"],
+    "links": {
+      "github": "https://github.com/adaumsilva/LuminaLLM",
+      "demo": null,
+      "wandb": null,
+      "netron": null,
+      "paper": null
+    },
+    "demo": {
+      "type": "none",
+      "url": null,
+      "height": 600
+    },
+    "imageUrl": null
+  },
+  {
+    "id": "nexus-rag",
+    "title": "Nexus RAG",
+    "featured": true,
+    "description": {
+      "problem": "Single-vector search in RAG systems suffers poor recall on long-tail queries and high hallucination rates on enterprise documentation — making them unreliable for production use.",
+      "decision": "Designed an agentic RAG pipeline using LangGraph, hybrid retrieval (ChromaDB vector search + BM25 keyword matching), and cross-encoder re-ranking. The agent decides whether to answer from the internal knowledge base or fall back to a general LLM response. Supports both OpenAI GPT-4 and Anthropic Claude 3.5.",
+      "impact": "Production-ready system with multi-format ingestion (PDF, Markdown), FastAPI serving with validation and logging, and measurably fewer hallucinations through the re-ranking layer."
+    },
+    "techTags": ["Python", "LangChain", "LangGraph", "FastAPI", "ChromaDB", "OpenAI", "Anthropic Claude", "BM25"],
+    "links": {
+      "github": "https://github.com/adaumsilva/nexus-rag",
+      "demo": null,
+      "wandb": null,
+      "netron": null,
+      "paper": null
+    },
+    "demo": {
+      "type": "none",
+      "url": null,
+      "height": 600
+    },
+    "imageUrl": null
+  },
+  {
+    "id": "mlops-sentinel",
+    "title": "MLOps Sentinel",
+    "featured": true,
+    "description": {
+      "problem": "ML teams lack a standardised, observable framework for taking models from experiment to production — leading to inconsistent deployments and zero visibility into model behaviour in production.",
+      "decision": "Built a complete MLOps reference implementation covering automated training pipelines, model serialisation, a production FastAPI inference layer, CI/CD via GitHub Actions, containerisation with multi-stage Docker, and real-time Prometheus metrics (latency, request volumes).",
+      "impact": "End-to-end template for the full ML lifecycle in a containerised environment. Observability layer surfaces latency and throughput metrics for every inference request without additional instrumentation."
+    },
+    "techTags": ["Python", "FastAPI", "Docker", "GitHub Actions", "Prometheus", "Scikit-learn", "XGBoost", "Pytest"],
+    "links": {
+      "github": "https://github.com/adaumsilva/MLOps-Sentinel",
+      "demo": null,
+      "wandb": null,
+      "netron": null,
+      "paper": null
+    },
+    "demo": {
+      "type": "none",
+      "url": null,
+      "height": 600
+    },
+    "imageUrl": null
+  }
+]

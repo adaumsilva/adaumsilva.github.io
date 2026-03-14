@@ -1,0 +1,22 @@
+{
+  "bio": [
+    "I'm an AI Engineer, with 10+ years of experience designing and building intelligent systems — from LLM-powered chatbots and RAG pipelines to agentic automation tools and production web platforms. I've led the full stack from model experimentation to cloud deployment on AWS Bedrock and Azure Foundry.",
+    "I founded Estudar TI, an AI training and consulting company in Brazil, where I led a cross-functional team to ship 200+ projects and AI training programmes that reached over 7,000 students.",
+    "I'm currently pursuing a Master of Science in Computer Science at the University of the Potomac while staying hands-on with the latest developments in LLMs, agentic systems, and GenAI. I'm based in Silver Spring, MD and open to new opportunities in the US."
+  ],
+  "skills": [
+    "Python",
+    "LLMs & GenAI",
+    "RAG & Agentic Systems",
+    "LangChain / HuggingFace",
+    "PyTorch / TensorFlow",
+    "AWS / AWS Bedrock",
+    "Azure AI Foundry",
+    "Google Cloud / Vertex AI",
+    "JavaScript / REST APIs",
+    "Next.js / React",
+    "SQL / Postgres, MySQL",
+    "Linux"
+  ],
+  "avatarUrl": "/images/headshot.jpg"
+}

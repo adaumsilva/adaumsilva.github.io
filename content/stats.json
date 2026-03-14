@@ -1,0 +1,38 @@
+{
+  "githubUsername": "adaumsilva",
+  "kaggle": [
+    {
+      "username": "adaumsilva",
+      "rank": "Expert",
+      "competitions": 14,
+      "bronze": 4,
+      "silver": 2,
+      "gold": 0
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Artificial Intelligence on Microsoft Azure",
+      "issuer": "Microsoft",
+      "year": 2026,
+      "url": "https://www.coursera.org/account/accomplishments/verify/SGIE7FILOYQQ"
+    },
+    {
+      "name": "Generative AI Applications with Amazon Bedrock",
+      "issuer": "Amazon AWS",
+      "year": 2022,
+      "url": "https://www.coursera.org/account/accomplishments/verify/XIR10DGAXJQM"
+    },
+    {
+      "name": "Generative AI and LLMs: Architecture and Data Preparation",
+      "issuer": "IBM",
+      "year": 2026,
+      "url": "https://www.coursera.org/account/accomplishments/verify/UJ5WYEBRPTXR"
+    },
+    {
+      "name": "Machine Learning with Python",
+      "issuer": "IBM",
+      "year": 2026,
+      "url": "https://www.credly.com/badges/1b424c77-83b2-41a7-aea3-e3f16efbb52e/linked_in_profile"
+    }]
+}

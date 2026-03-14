@@ -1,0 +1,46 @@
+[
+  {
+    "id": "estudar-ti",
+    "company": "Estudar TI",
+    "companyUrl": "#",
+    "role": "AI Engineer",
+    "startDate": "2015-05",
+    "endDate": "2025-10",
+    "description": [
+      "Designed and implemented AI agents, LLM-powered chatbots, RAG pipelines, and automation tools using LangChain, HuggingFace, PyTorch, and TensorFlow.",
+      "Deployed AI-powered applications on Amazon AWS Cloud, AWS Bedrock, and Azure AI Foundry, leveraging managed services to ensure scalability, reliability, and secure integration.",
+      "Built and maintained production-grade web platforms using Python, PHP, JavaScript, and MySQL, ensuring performance, reliability, and security across multiple high-traffic sites.",
+      "Maintained and enhanced a CRM and chatbot platform built with React, Node.js, and Redis, focusing on performance, scalability, and robust error handling in production.",
+      "Led a cross-functional team of 4 (design, marketing, sales, and engineering) to ship digital products, online courses, and AI trainings reaching more than 7,000 students."
+    ],
+    "techTags": ["Python", "LangChain", "HuggingFace", "PyTorch", "AWS Bedrock", "Azure AI Foundry", "React", "Node.js", "MySQL"]
+  },
+  {
+    "id": "city-council",
+    "company": "City Council of Santo André",
+    "companyUrl": "#",
+    "role": "Developer",
+    "startDate": "2017-04",
+    "endDate": "2017-12",
+    "description": [
+      "Developed and maintained the councilor's official WordPress website and blog using HTML, CSS, PHP, and JavaScript, ensuring responsive, accessible, and performant experiences.",
+      "Implemented SEO and analytics instrumentation to improve search rankings, monitor user behaviour, and support data-informed content strategy.",
+      "Collaborated with communications and policy teams, attending plenary sessions to translate complex topics into clear digital content, improving transparency and citizen engagement."
+    ],
+    "techTags": ["PHP", "WordPress", "JavaScript", "HTML/CSS", "SEO", "Analytics"]
+  },
+  {
+    "id": "agencia-3xceler",
+    "company": "Agência 3xceler",
+    "companyUrl": "#",
+    "role": "Backend Developer",
+    "startDate": "2015-03",
+    "endDate": "2015-08",
+    "description": [
+      "Engineered a full CMS platform for a travel company using PHP and the CodeIgniter framework, integrating database-driven content, booking logic, and admin tools.",
+      "Built custom WordPress themes and backend components aligned with design specs, usability standards, and SEO best practices for performance-focused websites.",
+      "Used GitHub for version control and QA workflows, ensuring reliable releases and maintainable codebases."
+    ],
+    "techTags": ["PHP", "CodeIgniter", "WordPress", "MySQL", "JavaScript", "GitHub"]
+  }
+]

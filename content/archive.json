@@ -1,0 +1,26 @@
+[
+  {
+    "id": "youtube-comment-fetcher",
+    "year": 2024,
+    "title": "YouTube Comment Fetcher",
+    "description": "Agentic automation tool that fetches YouTube comments via the official Data API, then uses OpenAI to generate blog articles and video scripts from the content. Integrates with Heygen for AI video generation.",
+    "techTags": ["Python", "OpenAI", "YouTube Data API", "LangChain", "Heygen API"],
+    "links": {
+      "github": "https://github.com/adaumsilva/youtube-comment-fetcher",
+      "demo": null,
+      "external": null
+    }
+  },
+  {
+    "id": "wp-comment-responder",
+    "year": 2024,
+    "title": "WP Comment Responder",
+    "description": "WordPress plugin that automatically replies to blog comments using GPT-4o-mini. Runs as a background cron job with configurable assistant behaviour, admin settings UI, and built-in update checker.",
+    "techTags": ["PHP", "WordPress", "OpenAI GPT-4o-mini"],
+    "links": {
+      "github": "https://github.com/adaumsilva/wp-comment-responder",
+      "demo": null,
+      "external": null
+    }
+  }
+]
