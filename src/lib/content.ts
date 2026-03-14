@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import type { Hero, About, Experience, Project, ArchiveItem, Stats } from "@/types/content";
+import type { Hero, About, Experience, Project, ArchiveItem, Stats, Social } from "@/types/content";
 
 const contentDir = path.join(process.cwd(), "content");
 
@@ -31,4 +31,8 @@ export function getArchive(): ArchiveItem[] {
 
 export function getStats(): Stats {
   return load<Stats>("stats.json");
+}
+
+export function getSocial(): Social {
+  return load<Social>("social.json");
 }

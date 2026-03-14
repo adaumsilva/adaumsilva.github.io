@@ -1,4 +1,4 @@
-import { getHero, getAbout, getExperience, getProjects, getArchive, getStats } from "@/lib/content";
+import { getHero, getAbout, getExperience, getProjects, getArchive, getStats, getSocial } from "@/lib/content";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileHeader } from "@/components/layout/MobileHeader";
 import { Hero } from "@/components/sections/Hero";
@@ -36,13 +36,14 @@ export default async function Home() {
   const projects = getProjects();
   const archive = getArchive();
   const stats = getStats();
+  const social = getSocial();
   const githubUser = await fetchGitHubUser(stats.githubUsername);
 
   return (
     <>
-      <MobileHeader />
+      <MobileHeader social={social} />
       <div className="lg:flex">
-        <Sidebar />
+        <Sidebar social={social} />
         <main
           id="main-content"
           className="flex-1 px-6 sm:px-12 lg:px-16 xl:px-24 max-w-3xl lg:max-w-none mx-auto"

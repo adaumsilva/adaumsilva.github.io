@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { SocialLinks } from "./SocialLinks";
+import type { Social } from "@/types/content";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -13,7 +14,7 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-export function Sidebar() {
+export function Sidebar({ social }: { social: Social }) {
   const active = useActiveSection();
 
   return (
@@ -65,7 +66,7 @@ export function Sidebar() {
       </nav>
 
       {/* Bottom: social links */}
-      <SocialLinks />
+      <SocialLinks social={social} />
     </aside>
   );
 }

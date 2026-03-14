@@ -92,6 +92,13 @@ export interface Stats {
   certifications: Certification[];
 }
 
+export interface Social {
+  github: string;
+  linkedin: string;
+  behance: string;
+  email: string;
+}
+
 export interface GitHubUser {
   login: string;
   public_repos: number;

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { SocialLinks } from "./SocialLinks";
+import type { Social } from "@/types/content";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -13,7 +14,7 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-export function MobileHeader() {
+export function MobileHeader({ social }: { social: Social }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -83,7 +84,7 @@ export function MobileHeader() {
             </nav>
 
             <div className="mt-auto">
-              <SocialLinks />
+              <SocialLinks social={social} />
             </div>
           </div>
         </div>
