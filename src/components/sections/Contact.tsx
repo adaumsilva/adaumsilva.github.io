@@ -1,6 +1,11 @@
 import { FadeInWhenVisible } from "@/components/ui/FadeInWhenVisible";
+import type { Social } from "@/types/content";
 
-export function Contact() {
+interface ContactProps {
+  social: Social;
+}
+
+export function Contact({ social }: ContactProps) {
   return (
     <section
       id="contact"
@@ -26,7 +31,7 @@ export function Contact() {
 
       <FadeInWhenVisible delay={0.3}>
         <a
-          href="mailto:adam@example.com"
+          href={`mailto:${social.email}`}
           className="btn-outline inline-block"
           aria-label="Send Adam an email"
         >

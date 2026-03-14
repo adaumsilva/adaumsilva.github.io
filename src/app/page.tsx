@@ -8,26 +8,6 @@ import { Projects } from "@/components/sections/Projects";
 import { Stats } from "@/components/sections/Stats";
 import { Archive } from "@/components/sections/Archive";
 import { Contact } from "@/components/sections/Contact";
-import type { GitHubUser } from "@/types/content";
-
-async function fetchGitHubUser(username: string): Promise<GitHubUser | null> {
-  try {
-    const headers: HeadersInit = {
-      Accept: "application/vnd.github+json",
-    };
-    if (process.env.GITHUB_TOKEN) {
-      headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-    }
-    const res = await fetch(`https://api.github.com/users/${username}`, {
-      headers,
-      next: { revalidate: false },
-    });
-    if (!res.ok) return null;
-    return res.json();
-  } catch {
-    return null;
-  }
-}
 
 export default async function Home() {
   const hero = getHero();
@@ -37,7 +17,6 @@ export default async function Home() {
   const archive = getArchive();
   const stats = getStats();
   const social = getSocial();
-  const githubUser = await fetchGitHubUser(stats.githubUsername);
 
   return (
     <>
@@ -52,9 +31,9 @@ export default async function Home() {
           <About data={about} />
           <Experience data={experience} />
           <Projects data={projects} />
-          <Stats data={stats} githubUser={githubUser} />
+          <Stats data={stats} />
           <Archive data={archive} />
-          <Contact />
+          <Contact social={social} />
           <footer className="py-6 text-center">
             <p className="text-slate text-xs font-mono">
               Designed &amp; Built by Adam Silva
