@@ -33,7 +33,7 @@ const glassStyle: React.CSSProperties = {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article
-      className="rounded-xl p-7 transition-transform duration-300 hover:-translate-y-1"
+      className="rounded-xl p-7 transition-transform duration-300 hover:-translate-y-1 flex flex-col h-full"
       style={glassStyle}
       aria-labelledby={`project-${project.id}-title`}
     >
@@ -54,8 +54,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </svg>
       </div>
 
-      {/* Description */}
-      <p className="text-slate text-sm leading-relaxed mb-6">
+      {/* Description — grows to fill available space */}
+      <p className="text-slate text-sm leading-relaxed mb-6 flex-1">
         {project.summary}
       </p>
 
