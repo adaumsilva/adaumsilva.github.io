@@ -48,7 +48,7 @@ export function About({ data }: AboutProps) {
                 <>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${data.avatarUrl}`}
+                    src={data.avatarUrl}
                     alt="Adam Silva"
                     width={260}
                     height={260}
