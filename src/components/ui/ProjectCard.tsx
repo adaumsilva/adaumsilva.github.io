@@ -24,116 +24,169 @@ function GitHubIcon() {
   );
 }
 
+/* Glassmorphism card — matches the uiverse snippet style */
+const glassStyle: React.CSSProperties = {
+  background: "linear-gradient(rgba(255,255,255,0.05), transparent)",
+  border: "1px solid rgba(255, 255, 255, 0.08)",
+  boxShadow: "0 25px 25px rgba(0, 0, 0, 0.25)",
+  backdropFilter: "blur(10px)",
+  WebkitBackdropFilter: "blur(10px)",
+};
+
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const isEven = index % 2 === 0;
 
+  /* Visual placeholder when no demo/screenshot is set */
+  const visual = project.demo.type !== "none" && project.demo.url ? (
+    <DemoIframe
+      type={project.demo.type}
+      url={project.demo.url}
+      height={project.demo.height}
+      title={project.title}
+    />
+  ) : (
+    <div
+      className="w-full h-full min-h-[280px] rounded-lg flex items-center justify-center"
+      style={{
+        background: "linear-gradient(135deg, rgba(217,119,87,0.08) 0%, rgba(17,34,64,0.6) 100%)",
+        border: "1px solid rgba(217,119,87,0.15)",
+      }}
+    >
+      <div className="text-center px-8 select-none">
+        <div
+          className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+          style={{ background: "rgba(217,119,87,0.15)", border: "1px solid rgba(217,119,87,0.3)" }}
+        >
+          <span className="text-green text-3xl font-mono font-bold">
+            {project.title.charAt(0)}
+          </span>
+        </div>
+        <p className="text-slate-light font-semibold text-base">{project.title}</p>
+      </div>
+    </div>
+  );
+
   return (
     <article
-      className={`relative flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-4 mb-24 last:mb-0`}
+      className="relative mb-28 last:mb-0"
       aria-labelledby={`project-${project.id}-title`}
     >
-      {/* Content card */}
-      <div className={`relative z-10 md:w-[55%] flex flex-col justify-center ${isEven ? "md:items-start md:text-left" : "md:items-end md:text-right"}`}>
-        <p className="font-mono text-green text-xs mb-2">Featured Project</p>
-        <h3 id={`project-${project.id}-title`} className="text-xl md:text-2xl font-semibold text-slate-lightest mb-5 hover:text-green transition-colors">
-          {project.title}
-        </h3>
+      {/* ── Desktop: 12-column grid, content + image overlap ── */}
+      <div className="hidden md:grid md:grid-cols-12 md:items-center">
 
-        {/* Description card */}
-        <div className="bg-navy-light p-6 rounded shadow-xl mb-5 w-full">
-          <div className="mb-3">
-            <span className="font-mono text-green text-xs uppercase tracking-wider">Problem</span>
-            <p className="text-slate text-sm leading-relaxed mt-1">{project.description.problem}</p>
-          </div>
-          <div className="mb-3">
-            <span className="font-mono text-green text-xs uppercase tracking-wider">Approach</span>
-            <p className="text-slate text-sm leading-relaxed mt-1">{project.description.decision}</p>
-          </div>
-          <div>
-            <span className="font-mono text-green text-xs uppercase tracking-wider">Impact</span>
-            <p className="text-slate-light text-sm leading-relaxed mt-1 font-medium">{project.description.impact}</p>
-          </div>
+        {/* Image column */}
+        <div className={`col-span-7 row-start-1 ${isEven ? "col-start-1" : "col-start-6"} rounded-lg overflow-hidden`}>
+          {visual}
         </div>
 
-        {/* Tech tags */}
-        <div className={`flex flex-wrap gap-2 mb-4 ${isEven ? "" : "md:justify-end"}`}>
-          {project.techTags.map((tag) => (
-            <TechTag key={tag} label={tag} />
-          ))}
-        </div>
+        {/* Content column — overlaps the image */}
+        <div className={`col-span-6 row-start-1 z-10 flex flex-col ${isEven ? "col-start-7 items-end text-right" : "col-start-1 items-start text-left"}`}>
+          <p className="font-mono text-green text-xs tracking-widest mb-2">Featured Project</p>
+          <h3
+            id={`project-${project.id}-title`}
+            className="text-2xl font-semibold text-slate-lightest mb-5 hover:text-green transition-colors duration-200"
+          >
+            {project.title}
+          </h3>
 
-        {/* Links */}
-        <div className={`flex gap-4 ${isEven ? "" : "md:justify-end"}`}>
-          {project.links.github && (
-            <Link
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${project.title} GitHub repository`}
-              className="text-slate hover:text-green transition-colors"
-            >
-              <GitHubIcon />
-            </Link>
-          )}
-          {project.links.wandb && (
-            <Link
-              href={project.links.wandb}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${project.title} Weights & Biases report`}
-              className="text-slate hover:text-green transition-colors flex items-center gap-1"
-            >
-              <span className="font-mono text-xs">W&B</span>
-              <ExternalLinkIcon />
-            </Link>
-          )}
-          {project.links.netron && (
-            <Link
-              href={project.links.netron}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${project.title} Netron model visualization`}
-              className="text-slate hover:text-green transition-colors flex items-center gap-1"
-            >
-              <span className="font-mono text-xs">Netron</span>
-              <ExternalLinkIcon />
-            </Link>
-          )}
-          {project.links.demo && (
-            <Link
-              href={project.links.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${project.title} live demo`}
-              className="text-slate hover:text-green transition-colors"
-            >
-              <ExternalLinkIcon />
-            </Link>
-          )}
+          {/* Glass description card */}
+          <div className="rounded-lg p-6 mb-5 w-full" style={glassStyle}>
+            <div className="mb-4">
+              <span className="font-mono text-green text-xs uppercase tracking-widest">Problem</span>
+              <p className="text-slate text-sm leading-relaxed mt-1">{project.description.problem}</p>
+            </div>
+            <div className="mb-4">
+              <span className="font-mono text-green text-xs uppercase tracking-widest">Approach</span>
+              <p className="text-slate text-sm leading-relaxed mt-1">{project.description.decision}</p>
+            </div>
+            <div>
+              <span className="font-mono text-green text-xs uppercase tracking-widest">Impact</span>
+              <p className="text-slate-light text-sm leading-relaxed mt-1 font-medium">{project.description.impact}</p>
+            </div>
+          </div>
+
+          {/* Tech tags */}
+          <div className={`flex flex-wrap gap-2 mb-4 ${isEven ? "justify-end" : "justify-start"}`}>
+            {project.techTags.map((tag) => (
+              <TechTag key={tag} label={tag} />
+            ))}
+          </div>
+
+          {/* Links */}
+          <div className={`flex gap-4 ${isEven ? "justify-end" : "justify-start"}`}>
+            {project.links.github && (
+              <Link href={project.links.github} target="_blank" rel="noopener noreferrer"
+                aria-label={`${project.title} GitHub repository`}
+                className="text-slate-light hover:text-green transition-colors">
+                <GitHubIcon />
+              </Link>
+            )}
+            {project.links.wandb && (
+              <Link href={project.links.wandb} target="_blank" rel="noopener noreferrer"
+                aria-label={`${project.title} W&B report`}
+                className="text-slate-light hover:text-green transition-colors flex items-center gap-1 font-mono text-xs">
+                W&B <ExternalLinkIcon />
+              </Link>
+            )}
+            {project.links.netron && (
+              <Link href={project.links.netron} target="_blank" rel="noopener noreferrer"
+                aria-label={`${project.title} Netron model`}
+                className="text-slate-light hover:text-green transition-colors flex items-center gap-1 font-mono text-xs">
+                Netron <ExternalLinkIcon />
+              </Link>
+            )}
+            {project.links.demo && (
+              <Link href={project.links.demo} target="_blank" rel="noopener noreferrer"
+                aria-label={`${project.title} live demo`}
+                className="text-slate-light hover:text-green transition-colors">
+                <ExternalLinkIcon />
+              </Link>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* Demo / visual area */}
-      <div className={`md:absolute md:top-0 md:bottom-0 ${isEven ? "md:right-0 md:w-[55%]" : "md:left-0 md:w-[55%]"} rounded overflow-hidden`}>
-        {project.demo.type !== "none" && project.demo.url ? (
-          <DemoIframe
-            type={project.demo.type}
-            url={project.demo.url}
-            height={project.demo.height}
-            title={project.title}
-          />
-        ) : (
-          <div className="w-full h-full min-h-[220px] bg-navy-light rounded flex items-center justify-center border border-navy-lighter">
-            <div className="text-center px-6">
-              <div className="w-12 h-12 rounded-full bg-green/10 flex items-center justify-center mx-auto mb-3">
-                <span className="text-green text-2xl font-mono font-bold">
-                  {project.title.charAt(0)}
-                </span>
-              </div>
-              <p className="text-slate text-sm">{project.title}</p>
-            </div>
+      {/* ── Mobile: stacked card ── */}
+      <div className="md:hidden rounded-lg overflow-hidden" style={glassStyle}>
+        <div className="p-6">
+          <p className="font-mono text-green text-xs tracking-widest mb-2">Featured Project</p>
+          <h3
+            id={`project-${project.id}-title`}
+            className="text-xl font-semibold text-slate-lightest mb-4"
+          >
+            {project.title}
+          </h3>
+          <div className="mb-4">{visual}</div>
+          <div className="mb-3">
+            <span className="font-mono text-green text-xs uppercase tracking-widest">Problem</span>
+            <p className="text-slate text-sm leading-relaxed mt-1">{project.description.problem}</p>
           </div>
-        )}
+          <div className="mb-3">
+            <span className="font-mono text-green text-xs uppercase tracking-widest">Approach</span>
+            <p className="text-slate text-sm leading-relaxed mt-1">{project.description.decision}</p>
+          </div>
+          <div className="mb-4">
+            <span className="font-mono text-green text-xs uppercase tracking-widest">Impact</span>
+            <p className="text-slate-light text-sm leading-relaxed mt-1 font-medium">{project.description.impact}</p>
+          </div>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.techTags.map((tag) => <TechTag key={tag} label={tag} />)}
+          </div>
+          <div className="flex gap-4">
+            {project.links.github && (
+              <Link href={project.links.github} target="_blank" rel="noopener noreferrer"
+                aria-label={`${project.title} GitHub`} className="text-slate-light hover:text-green transition-colors">
+                <GitHubIcon />
+              </Link>
+            )}
+            {project.links.demo && (
+              <Link href={project.links.demo} target="_blank" rel="noopener noreferrer"
+                aria-label={`${project.title} demo`} className="text-slate-light hover:text-green transition-colors">
+                <ExternalLinkIcon />
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </article>
   );
