@@ -133,7 +133,7 @@ export default function UpskillPage() {
               className="text-xl leading-relaxed max-w-2xl"
               style={{ color: "var(--color-slate-light)" }}
             >
-              AI-powered enterprise SaaS that bridges daily work output and professional
+              AI-powered learning plataform that bridges daily work output and professional
               development — detecting skill gaps automatically, delivering learning exactly
               when it matters.
             </p>

@@ -64,12 +64,12 @@ interface GalleryViewProps {
 }
 
 function GalleryView({ images, current, direction, onGo, onGoTo, compact }: GalleryViewProps) {
-  const thumbHeight = compact ? "h-12 sm:h-14" : "h-16 sm:h-20";
+  const thumbHeight = compact ? "h-12 sm:h-14" : "h-20 sm:h-24";
 
   return (
     <div className="flex flex-col w-full">
       {/* Main image */}
-      <div className="relative w-full bg-black overflow-hidden" style={{ aspectRatio: "16/9" }}>
+      <div className="relative w-full bg-black overflow-hidden" style={{ aspectRatio: "16/10" }}>
         <AnimatePresence mode="wait" custom={direction}>
           <m.div
             key={current}
@@ -219,37 +219,110 @@ export function ImageSlider({ images, className }: ImageSliderProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2, ease: EASE }}
-              className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-8"
-              style={{ backgroundColor: "rgba(0,0,0,0.92)", backdropFilter: "blur(8px)" }}
-              onClick={() => setFullscreen(false)}
+              className="fixed inset-0 z-[9999] flex flex-col bg-black"
             >
-              <m.div
-                initial={{ scale: 0.96, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.96, opacity: 0 }}
-                transition={{ duration: 0.25, ease: EASE }}
-                className="relative w-full max-w-6xl"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {/* Close button */}
+              {/* Top bar */}
+              <div className="flex items-center justify-between px-6 py-4 shrink-0">
+                <span className="font-mono text-xs text-white/40 tracking-widest">
+                  {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+                </span>
                 <button
                   onClick={() => setFullscreen(false)}
                   aria-label="Close fullscreen"
-                  className="absolute -top-10 right-0 flex items-center gap-1.5 text-white/50 hover:text-white transition-colors duration-200 font-mono text-xs"
+                  className="flex items-center gap-2 text-white/50 hover:text-white transition-colors duration-200 font-mono text-xs"
                 >
                   <CloseIcon />
-                  ESC
+                  <span>ESC</span>
+                </button>
+              </div>
+
+              {/* Main image — fills remaining height */}
+              <div className="relative flex-1 overflow-hidden">
+                <AnimatePresence mode="wait" custom={direction}>
+                  <m.div
+                    key={current}
+                    custom={direction}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.4, ease: EASE }}
+                    className="absolute inset-0"
+                  >
+                    <img
+                      src={images[current].src}
+                      alt={images[current].alt}
+                      className="w-full h-full object-contain"
+                      draggable={false}
+                    />
+                  </m.div>
+                </AnimatePresence>
+
+                {/* Gradient overlays */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(to right, rgba(0,0,0,0.3) 0%, transparent 15%, transparent 85%, rgba(0,0,0,0.3) 100%)",
+                  }}
+                />
+
+                {/* Prev arrow */}
+                <button
+                  onClick={() => go(-1)}
+                  aria-label="Previous screenshot"
+                  className="absolute left-0 top-0 bottom-0 z-10 flex items-center justify-center px-6 text-white/60 hover:text-white transition-colors duration-200 group"
+                >
+                  <span className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 bg-black/30 backdrop-blur-sm group-hover:border-white/40 group-hover:bg-black/50 transition-all duration-200">
+                    <ChevronLeft size={6} />
+                  </span>
                 </button>
 
-                <GalleryView
-                  images={images}
-                  current={current}
-                  direction={direction}
-                  onGo={go}
-                  onGoTo={goTo}
-                  compact={false}
-                />
-              </m.div>
+                {/* Next arrow */}
+                <button
+                  onClick={() => go(1)}
+                  aria-label="Next screenshot"
+                  className="absolute right-0 top-0 bottom-0 z-10 flex items-center justify-center px-6 text-white/60 hover:text-white transition-colors duration-200 group"
+                >
+                  <span className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 bg-black/30 backdrop-blur-sm group-hover:border-white/40 group-hover:bg-black/50 transition-all duration-200">
+                    <ChevronRight size={6} />
+                  </span>
+                </button>
+              </div>
+
+              {/* Thumbnail filmstrip */}
+              <div
+                className="flex gap-2 px-6 pt-3 pb-5 shrink-0"
+                role="tablist"
+                aria-label="Screenshot thumbnails"
+              >
+                {images.map((img, i) => (
+                  <button
+                    key={i}
+                    role="tab"
+                    aria-selected={i === current}
+                    aria-label={`View screenshot ${i + 1}`}
+                    onClick={() => goTo(i)}
+                    className={`relative flex-1 h-16 sm:h-20 overflow-hidden transition-all duration-300 ${
+                      i === current ? "opacity-100" : "opacity-30 hover:opacity-60"
+                    }`}
+                  >
+                    <img
+                      src={img.src}
+                      alt={`Thumbnail ${i + 1}`}
+                      className="w-full h-full object-cover"
+                      draggable={false}
+                    />
+                    {i === current && (
+                      <span
+                        className="absolute bottom-0 left-0 right-0 h-0.5"
+                        style={{ backgroundColor: "var(--color-green)" }}
+                        aria-hidden="true"
+                      />
+                    )}
+                  </button>
+                ))}
+              </div>
             </m.div>
           )}
         </AnimatePresence>,
