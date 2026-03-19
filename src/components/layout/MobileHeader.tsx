@@ -8,6 +8,7 @@ import type { Social } from "@/types/content";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Featured Project", href: "#featured-project" },
   { label: "Projects", href: "#projects" },
   { label: "Stats", href: "#stats" },
   { label: "Archive", href: "#archive" },

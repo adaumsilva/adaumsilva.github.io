@@ -4,6 +4,7 @@ import { MobileHeader } from "@/components/layout/MobileHeader";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Experience } from "@/components/sections/Experience";
+import { FeaturedProject } from "@/components/sections/FeaturedProject";
 import { Projects } from "@/components/sections/Projects";
 import { Stats } from "@/components/sections/Stats";
 import { Archive } from "@/components/sections/Archive";
@@ -30,6 +31,7 @@ export default async function Home() {
           <Hero data={hero} />
           <About data={about} />
           <Experience data={experience} />
+          <FeaturedProject />
           <Projects data={projects} />
           <Stats data={stats} />
           <Archive data={archive} />

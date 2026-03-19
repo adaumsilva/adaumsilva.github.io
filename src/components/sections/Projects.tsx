@@ -13,7 +13,7 @@ export function Projects({ data }: ProjectsProps) {
   return (
     <section id="projects" className="py-24 lg:py-32" aria-label="Featured projects">
       <FadeInWhenVisible>
-        <SectionHeading number="03" title="Some Projects I've Built" />
+        <SectionHeading number="04" title="Some Projects I've Built" />
       </FadeInWhenVisible>
 
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 items-stretch">
