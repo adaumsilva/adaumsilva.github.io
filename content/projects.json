@@ -1,5 +1,31 @@
 [
   {
+    "id": "upskill",
+    "title": "Upskill",
+    "featured": true,
+    "summary": "An enterprise-grade AI learning platform that integrates directly into team workflows via Slack and Google Workspace — autonomously detecting skill gaps and generating personalized learning interventions using a dual-model pipeline (Llama 4 + GPT-5) on Microsoft Azure Foundry.",
+    "description": {
+      "problem": "Professional development is disconnected from daily work output — skill gaps are self-reported through surveys, spotted late, and addressed with generic training that ignores what people actually do all day.",
+      "decision": "Built an enterprise SaaS platform that ingests work artifacts from Slack and Google Workspace and runs a dual-model pipeline on Microsoft Azure Foundry: Llama 4 analyses artifacts across its 10M token context window to detect objective skill mastery, and GPT-5 synthesises those insights into personalised learning interventions. FastAPI backend with async analysis pipelines and Pydantic validation; Next.js dashboard with a hook-based real-time data layer.",
+      "impact": "Zero-friction skill tracking with no manual input, high-fidelity diagnostics that surface gaps traditional analytics miss, and just-in-time learning delivered the moment a gap is detected — with enterprise PII protection and content filtering applied before analysis."
+    },
+    "techTags": ["Next.js", "FastAPI", "PostgreSQL", "Llama 4", "GPT-5", "Azure Foundry", "Python", "TypeScript"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "wandb": null,
+      "netron": null,
+      "paper": null,
+      "caseStudy": "/projects/upskill/"
+    },
+    "demo": {
+      "type": "none",
+      "url": null,
+      "height": 600
+    },
+    "imageUrl": "/screenshots/upskill/print1.jpg"
+  },
+  {
     "id": "lumina-llm",
     "title": "LuminaLLM",
     "featured": true,
@@ -15,7 +41,8 @@
       "demo": null,
       "wandb": null,
       "netron": null,
-      "paper": null
+      "paper": null,
+      "caseStudy": null
     },
     "demo": {
       "type": "none",
@@ -40,7 +67,8 @@
       "demo": null,
       "wandb": null,
       "netron": null,
-      "paper": null
+      "paper": null,
+      "caseStudy": null
     },
     "demo": {
       "type": "none",
@@ -65,7 +93,8 @@
       "demo": null,
       "wandb": null,
       "netron": null,
-      "paper": null
+      "paper": null,
+      "caseStudy": null
     },
     "demo": {
       "type": "none",

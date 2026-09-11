@@ -12,14 +12,14 @@ const glassStyle: React.CSSProperties = {
 };
 
 const techTags = [
-  "Next.js",
-  "FastAPI",
-  "PostgreSQL",
-  "Llama 4",
-  "GPT-5",
-  "Azure Foundry",
-  "Python",
-  "TypeScript",
+  "WordPress",
+  "WooCommerce",
+  "PHP",
+  "JavaScript",
+  "OpenAI",
+  "Tool Calling",
+  "RAG",
+  "REST API",
 ];
 
 export function FeaturedProject() {
@@ -37,7 +37,7 @@ export function FeaturedProject() {
         <article
           className="rounded-xl p-8 lg:p-10"
           style={glassStyle}
-          aria-labelledby="upskill-card-title"
+          aria-labelledby="ai-shopping-assistant-card-title"
         >
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Screenshot */}
@@ -49,8 +49,8 @@ export function FeaturedProject() {
               }}
             >
               <img
-                src="/screenshots/upskill/print1.jpg"
-                alt="Upskill dashboard — AI-powered learning platform"
+                src="/screenshots/ai-shopping-assistant/screenshot-2.jpg"
+                alt="AI Shopping Assistant — full-screen interface with conversation history and the live cart side by side"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -58,31 +58,43 @@ export function FeaturedProject() {
             {/* Content */}
             <div className="flex flex-col gap-5 order-2">
               <p className="font-mono text-green text-xs tracking-widest uppercase">
-                Enterprise SaaS · AI Platform
+                Production SaaS · AI Agent
               </p>
               <h3
-                id="upskill-card-title"
+                id="ai-shopping-assistant-card-title"
                 className="text-3xl font-bold text-slate-lightest"
               >
-                Upskill
+                AI Shopping Assistant
               </h3>
               <p className="text-slate text-sm leading-relaxed">
-                An enterprise-grade AI learning platform that integrates directly into team
-                workflows via Slack and Google Workspace — autonomously detecting skill gaps
-                and generating personalized learning interventions using a dual-model pipeline
-                (Llama 4 + GPT-5) on Microsoft Azure Foundry.
+                A production AI sales agent for WooCommerce, shipped as a WordPress plugin on a
+                metered SaaS gateway — shoppers search the catalogue in natural language, manage
+                their cart, and check out without leaving the chat, with RAG-grounded answers from
+                uploaded documents and one-click human takeover from the admin inbox.
               </p>
               <div className="flex flex-wrap gap-2">
                 {techTags.map((tag) => (
                   <TechTag key={tag} label={tag} />
                 ))}
               </div>
-              <div className="pt-1">
-                <Link href="/projects/upskill/" className="btn-outline inline-flex items-center gap-2">
+              <div className="pt-1 flex flex-wrap items-center gap-5">
+                <Link href="/projects/ai-shopping-assistant/" className="btn-outline inline-flex items-center gap-2">
                   View Project
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
+                </Link>
+                <Link
+                  href="https://store.f5digitalmarketing.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="AI Shopping Assistant live demo"
+                  className="flex items-center gap-2 text-slate-light hover:text-green transition-colors duration-200 text-sm"
+                >
+                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Live Demo
                 </Link>
               </div>
             </div>

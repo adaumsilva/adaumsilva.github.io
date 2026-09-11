@@ -14,6 +14,14 @@ function GitHubIcon() {
   );
 }
 
+function ArrowIcon() {
+  return (
+    <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  );
+}
+
 function ExternalLinkIcon() {
   return (
     <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -68,6 +76,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Links */}
       <div className="flex flex-wrap items-center gap-5 pt-4 border-t border-white/5">
+        {project.links.caseStudy && (
+          <Link
+            href={project.links.caseStudy}
+            aria-label={`${project.title} case study`}
+            className="flex items-center gap-2 text-slate-light hover:text-green transition-colors duration-200 text-sm"
+          >
+            <ArrowIcon />
+            View Project
+          </Link>
+        )}
         {project.links.github && (
           <Link
             href={project.links.github}

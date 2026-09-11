@@ -46,6 +46,7 @@ export interface Project {
     wandb: string | null;
     netron: string | null;
     paper: string | null;
+    caseStudy: string | null;
   };
   demo: {
     type: DemoType;
