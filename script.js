@@ -33,29 +33,38 @@
  mobile.addEventListener('change', () => { setMenu(false); scheduleUpdate(); });
 
  /* ---------- Scroll-linked blur/fade ----------
-    Elements matching FX_SELECTOR get the .fx class. Where the browser supports CSS
-    view() timelines, style.css animates them on the compositor. Elsewhere updateFx()
-    reproduces the same curve: blur in over the bottom 25vh, crisp while reading, blur
-    out over the top 25vh. */
- const FX_SELECTOR = '.section-heading,.featured,.project-card,.about-intro,.about-details,.experience-list>details,.contributions>a,.toolkit>div:first-child,.tool-row,.certs,.education>div:first-child,.education article,.language-list,.archive>.eyebrow,.archive>a,.contact>.eyebrow,.contact-title,.ask-heading,.ask-form,.ask-suggestions,.ask-status,.case-lead,.project-gallery,.case-body>*';
+    Elements matching FX_SELECTOR get the .fx class (FX_IN_SELECTOR: entrance only, for
+    blocks people interact with). Where the browser supports CSS view() timelines,
+    style.css animates them on the compositor. Elsewhere updateFx() reproduces the same
+    curve: fade/blur in over the bottom 40vh of the viewport, crisp while reading,
+    fade/blur out over the 40vh above the fixed header. Keep FX_BAND and the easing in
+    step with the animation-range and cubic-bezier values in style.css. */
+ const FX_SELECTOR = '.section-heading,.featured,.project-card,.about-intro,.about-details,.experience-list>details,.contributions>a,.toolkit>div:first-child,.tool-row,.certs,.education>div:first-child,.education article,.language-list,.archive>.eyebrow,.archive>a,.contact-title,.ask-heading,.case-lead,.case-body>*';
+ const FX_IN_SELECTOR = '.ask-form,.ask-suggestions,.ask-status,.project-gallery';
+ const FX_BAND = .4, FX_SHIFT_IN = 56, FX_SHIFT_OUT = 40, FX_BLUR = 14;
  const fxNodes = [...document.querySelectorAll(FX_SELECTOR)];
  fxNodes.forEach(el => el.classList.add('fx'));
- const cssTimelines = CSS.supports('animation-timeline', 'view()') && CSS.supports('animation-range', 'cover calc(100% - 25vh)');
+ document.querySelectorAll(FX_IN_SELECTOR).forEach(el => { el.classList.add('fx', 'fx--in'); fxNodes.push(el); });
+ const cssTimelines = CSS.supports('animation-timeline', 'view()') && CSS.supports('animation-range', 'cover calc(100% - 40vh)');
+ const clamp01 = value => Math.min(1, Math.max(0, value));
+ const easeInOut = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
  const clearFx = el => { el.style.removeProperty('opacity'); el.style.removeProperty('transform'); el.style.removeProperty('filter'); };
+ // The fixed header hides what slides under it, and view() timelines inset their top edge by
+ // scroll-padding-top for the same reason; measure the same line so both paths agree.
+ const topInset = () => parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
  function updateFx() {
   if (cssTimelines) return;
   if (motionPreference.matches) { fxNodes.forEach(clearFx); return; }
-  // view() timelines inset the top edge by the page's scroll-padding (the fixed header); match it.
-  const vh = window.innerHeight, band = vh * .25, inset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+  const vh = window.innerHeight, band = vh * FX_BAND, inset = topInset();
   fxNodes.forEach(el => {
    const rect = el.getBoundingClientRect();
    if (rect.bottom <= 0 || rect.top >= vh || rect.height === 0) return;
    if (el.matches(':focus-within')) { clearFx(el); return; }
-   const enter = Math.min(1, Math.max(0, (vh - rect.top) / band));
-   const exit = Math.min(1, Math.max(0, 1 - (rect.bottom - inset) / band));
+   const enter = clamp01((vh - rect.top) / band);
+   const exit = el.classList.contains('fx--in') ? 0 : clamp01(1 - (rect.bottom - inset) / band);
    let opacity, shift, blur;
-   if (enter < 1) { const e = 1 - Math.pow(1 - enter, 2.5); opacity = e; shift = 44 * (1 - e); blur = 12 * (1 - e); }
-   else if (exit > 0) { const e = exit * exit; opacity = 1 - e; shift = -32 * e; blur = 12 * e; }
+   if (enter < 1) { const e = easeInOut(enter); opacity = e; shift = FX_SHIFT_IN * (1 - e); blur = FX_BLUR * (1 - e); }
+   else if (exit > 0) { const e = easeInOut(exit); opacity = 1 - e; shift = -FX_SHIFT_OUT * e; blur = FX_BLUR * e; }
    else { clearFx(el); return; }
    el.style.opacity = opacity.toFixed(3);
    el.style.transform = `translateY(${shift.toFixed(1)}px)`;
@@ -75,12 +84,13 @@
   }
   if (hero) {
    const enabled = !motionPreference.matches && !mobile.matches;
-   const progress = Math.min(1, Math.max(0, y / Math.max(1, hero.offsetHeight)));
-   const fade = Math.max(0, progress - .45) * 1.5;
+   // The hero exits on the same curve as the .fx blocks: gone by the time it reaches the header.
+   const grid = hero.querySelector('.hero-grid') || hero;
+   const fade = enabled ? easeInOut(clamp01(1 - (grid.getBoundingClientRect().bottom - topInset()) / (window.innerHeight * FX_BAND))) : 0;
    hero.style.setProperty('--portrait-shift', enabled ? `${Math.min(y * .12, 65)}px` : '0px');
    hero.style.setProperty('--hero-shift', enabled ? `${-Math.min(y * .065, 35)}px` : '0px');
-   hero.style.setProperty('--hero-opacity', enabled ? String(Math.max(0, 1 - fade)) : '1');
-   hero.style.setProperty('--hero-blur', enabled ? `${Math.min(10, fade * 12).toFixed(2)}px` : '0px');
+   hero.style.setProperty('--hero-opacity', String(1 - fade));
+   hero.style.setProperty('--hero-blur', `${(FX_BLUR * fade).toFixed(2)}px`);
   }
   updateFx();
  }

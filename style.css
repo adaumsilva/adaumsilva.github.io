@@ -19,23 +19,26 @@
 /* ============================================================
    Motion: hero exit, scroll-linked blur/fade, headline intro
    ============================================================
-   Every element that script.js tags with .fx enters blurred from
-   below, is crisp while it is being read, and blurs out toward the
-   top. Chrome/Edge/Safari drive it on the compositor with view()
-   timelines; browsers without them get the same curve from
-   script.js, which writes opacity/transform/filter inline. */
+   Every element that script.js tags with .fx fades/blurs in over the
+   bottom 40vh of the viewport, is crisp while it is being read, and
+   fades/blurs out over the 40vh above the fixed header (view() ranges
+   are inset by the page's scroll-padding-top). .fx--in marks
+   interactive blocks that only get the entrance. Chrome/Edge/Safari
+   drive it on the compositor with view() timelines; browsers without
+   them get the same curve from script.js via inline styles. */
 .hero-copy{filter:blur(var(--hero-blur,0px))}
 .portrait-wrap{opacity:var(--hero-opacity,1);filter:blur(var(--hero-blur,0px))}
 @keyframes headline-intro{from{transform:translateY(115%) rotate(2deg);opacity:0}to{transform:translateY(0) rotate(0);opacity:1}}
-@keyframes fx-in{from{opacity:0;transform:translateY(44px);filter:blur(12px)}to{opacity:1;transform:none;filter:blur(0)}}
-@keyframes fx-out{from{opacity:1;transform:none;filter:blur(0)}to{opacity:0;transform:translateY(-32px);filter:blur(12px)}}
+@keyframes fx-in{from{opacity:0;transform:translateY(56px);filter:blur(14px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes fx-out{from{opacity:1;transform:none;filter:blur(0)}to{opacity:0;transform:translateY(-40px);filter:blur(14px)}}
 @media(prefers-reduced-motion:no-preference){
 .headline-line>span,.headline-line>em{animation:headline-intro 1s cubic-bezier(.22,1,.36,1) both}
 .headline-line:nth-child(2)>span{animation-delay:.12s}
 .headline-line:nth-child(3)>em{animation-delay:.24s}
 html.is-loading .headline-line>span,html.is-loading .headline-line>em{animation-play-state:paused}
-@supports (animation-timeline:view()) and (animation-range:cover calc(100% - 25vh)){
-.fx{animation:fx-in cubic-bezier(.25,.6,.35,1) both,fx-out cubic-bezier(.65,0,.75,.4) forwards;animation-timeline:view();animation-range:cover 0% cover 25vh,cover calc(100% - 25vh) cover 100%}
+@supports (animation-timeline:view()) and (animation-range:cover calc(100% - 40vh)){
+.fx{animation:fx-in cubic-bezier(.45,0,.55,1) both,fx-out cubic-bezier(.45,0,.55,1) forwards;animation-timeline:view();animation-range:cover 0% cover 40vh,cover calc(100% - 40vh) cover 100%}
+.fx--in{animation:fx-in cubic-bezier(.45,0,.55,1) both;animation-timeline:view();animation-range:cover 0% cover 40vh}
 .fx:focus-within{animation:none}
 }
 }
