@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# adaumsilva.github.io
 
-## Getting Started
+Adam Silva's portfolio. Plain static HTML/CSS/JS — no framework, no build step.
 
-First, run the development server:
+Live: https://adaumsilva.github.io
+
+## Structure
+
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Home page |
+| `projects/*/index.html` | Project case studies with screenshot galleries |
+| `404.html` | Custom not-found page served by GitHub Pages |
+| `style.css` | All styles (site, assistant, preloader, scroll effects) |
+| `preloader.js` | Loading screen; runs first on every page |
+| `script.js` | Navigation, hero parallax, counters, scroll-linked blur/fade |
+| `retrieval.js` | Extractive search engine over `knowledge.json` |
+| `assistant.js` | "Ask Adam" section + floating assistant dialog (both use `retrieval.js`) |
+| `gallery.js` | Project page galleries and lightbox |
+| `knowledge.json` | Reviewed passages from the portfolio and résumé used by the assistant |
+
+## Local preview
+
+The assistant fetches `knowledge.json`, so the site must be served over HTTP (not `file://`):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+python -m http.server 8000
+# open http://localhost:8000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which uploads the static files
+to GitHub Pages (Settings → Pages → Source must be **GitHub Actions**). `.nojekyll`
+keeps Pages from running Jekyll on the files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Updating the assistant
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The assistant is extractive search, not a generative model: it only returns passages
+that already exist in `knowledge.json`. When the portfolio or résumé changes, edit the
+corresponding records there. Each record's `href` must be a same-page anchor
+(`#work`) or `resume.pdf#page=N`.

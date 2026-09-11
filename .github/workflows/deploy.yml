@@ -21,24 +21,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # The site is plain static files; no build step. Stage only what the
+      # browser needs so repo tooling (.claude, CLAUDE.md, README) is not published.
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude '.claude' \
+            --exclude '_site' --exclude 'CLAUDE.md' --exclude 'README.md' \
+            --exclude '.gitignore' --exclude '.mcp.json' --exclude 'venv' \
+            ./ _site/
+          ls -la _site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./out"
+          path: "./_site"
 
   deploy:
     environment:

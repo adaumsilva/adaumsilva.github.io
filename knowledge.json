@@ -1,0 +1,653 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "id": "role-estudar-ti",
+      "title": "Estudar TI — AI Engineer",
+      "text": "AI Engineer at Estudar TI. JAN 2018 — SEP 2025. São Paulo, Brazil. Production AI, scalable backend systems, and technical education.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "career",
+      "keywords": "Estudar TI employment history job dates timeline"
+    },
+    {
+      "id": "estudar-ti-0",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Doubled concurrent LLM chat sessions by optimizing state management and maintaining a CRM and chatbot platform built with React, Node.js, and Redis.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-1",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Achieved 99% uptime for AI applications deployed on AWS, AWS Bedrock, and Azure Foundry, processing 10M+ tokens with integrated PII protection.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-2",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Automated career roadmaps for 7,000 users by implementing AI agents, LLM-powered chatbots, RAG systems, models, and automation tools with LangChain, Hugging Face, PyTorch, and TensorFlow.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-3",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Maintained production web platforms serving 50,000+ users using Python, JavaScript, Next.js, React, TypeScript, PostgreSQL, MySQL, and SQL.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-4",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Reduced experimentation cycles by 40% and accelerated GenAI feature delivery through Python utilities and services for data processing and third-party API integration.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-5",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Reached 7,000+ students through applications and AI training, leading a multidisciplinary team across engineering, design, and sales.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-6",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Achieved 95% model accuracy across large-scale datasets with end-to-end machine learning pipelines using scikit-learn, Pandas, and NumPy.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-7",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Reduced inference latency by 30% through scalable FastAPI REST APIs and optimized NoSQL database schemas.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-8",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Reduced hallucinations by 60% by architecting RAG pipelines and automated evaluation frameworks for LLM performance.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-9",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Reduced delivery time for a key system from three months to three weeks using AI-assisted workflows with Claude Code.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "estudar-ti-10",
+      "title": "Estudar TI — AI Engineer",
+      "text": "Accelerated AI microservice delivery by 50% through GitHub Actions CI/CD and automated evaluation, targeting Google Kubernetes Engine deployment.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "Estudar TI Python LangChain Hugging Face PyTorch TensorFlow AWS Bedrock Azure AI Foundry React Node.js Redis FastAPI GKE"
+    },
+    {
+      "id": "role-city-council",
+      "title": "City Council of Santo André — Developer",
+      "text": "Developer at City Council of Santo André. APR — DEC 2017. Santo André, Brazil. Accessible public-facing websites and digital communication.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "career",
+      "keywords": "City Council of Santo André employment history job dates timeline"
+    },
+    {
+      "id": "city-council-0",
+      "title": "City Council of Santo André — Developer",
+      "text": "Developed and maintained the councilor’s official WordPress website and blog, expanding digital visibility to a potential audience of 715,000+ residents.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "City Council of Santo André WordPress PHP HTML / CSS JavaScript SEO Analytics"
+    },
+    {
+      "id": "city-council-1",
+      "title": "City Council of Santo André — Developer",
+      "text": "Implemented SEO and analytics across 100% of core website pages to monitor traffic, user behavior, and content engagement.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "City Council of Santo André WordPress PHP HTML / CSS JavaScript SEO Analytics"
+    },
+    {
+      "id": "city-council-2",
+      "title": "City Council of Santo André — Developer",
+      "text": "Translated information from 20+ plenary sessions and policy discussions into clear digital content with communications and policy teams.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "City Council of Santo André WordPress PHP HTML / CSS JavaScript SEO Analytics"
+    },
+    {
+      "id": "city-council-3",
+      "title": "City Council of Santo André — Developer",
+      "text": "Improved usability across 10+ website sections through responsive layouts, front-end optimization, and accessible desktop and mobile experiences.",
+      "source": "LinkedIn résumé · p. 2",
+      "href": "resume.pdf#page=2",
+      "category": "achievement",
+      "keywords": "City Council of Santo André WordPress PHP HTML / CSS JavaScript SEO Analytics"
+    },
+    {
+      "id": "role-3xceler",
+      "title": "Agência 3xceler Ltda - Me — Backend Developer",
+      "text": "Backend Developer at Agência 3xceler Ltda - Me. MAR — AUG 2015. São Paulo, Brazil. Custom content platforms, reusable components, and client websites.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "career",
+      "keywords": "Agência 3xceler Ltda - Me employment history job dates timeline"
+    },
+    {
+      "id": "3xceler-0",
+      "title": "Agência 3xceler Ltda - Me — Backend Developer",
+      "text": "Delivered 5+ client-facing WordPress websites and landing pages with custom themes and backend components aligned with design, usability, and SEO requirements.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Agência 3xceler Ltda - Me PHP CodeIgniter WordPress HTML / CSS JavaScript"
+    },
+    {
+      "id": "3xceler-1",
+      "title": "Agência 3xceler Ltda - Me — Backend Developer",
+      "text": "Created reusable WordPress templates and backend components across 15+ custom page layouts using PHP, HTML, CSS, and JavaScript.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Agência 3xceler Ltda - Me PHP CodeIgniter WordPress HTML / CSS JavaScript"
+    },
+    {
+      "id": "3xceler-2",
+      "title": "Agência 3xceler Ltda - Me — Backend Developer",
+      "text": "Built a PHP and CodeIgniter CMS that centralized management of 100+ travel packages, destinations, and content records.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Agência 3xceler Ltda - Me PHP CodeIgniter WordPress HTML / CSS JavaScript"
+    },
+    {
+      "id": "3xceler-3",
+      "title": "Agência 3xceler Ltda - Me — Backend Developer",
+      "text": "Converted 20+ UX wireframes and design layouts into production-ready digital experiences in collaboration with designers and stakeholders.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Agência 3xceler Ltda - Me PHP CodeIgniter WordPress HTML / CSS JavaScript"
+    },
+    {
+      "id": "role-freelancer",
+      "title": "Freelancer — Web Developer",
+      "text": "Web Developer at Freelancer. FEB 2009 — DEC 2014. Santo André, Brazil. Websites and practical software for small businesses.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "career",
+      "keywords": "Freelancer employment history job dates timeline"
+    },
+    {
+      "id": "freelancer-0",
+      "title": "Freelancer — Web Developer",
+      "text": "Managed and updated client websites for Pennacorp.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Freelancer Web development WordPress Client websites"
+    },
+    {
+      "id": "freelancer-1",
+      "title": "Freelancer — Web Developer",
+      "text": "Developed the website for the auto parts distributor Becap.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Freelancer Web development WordPress Client websites"
+    },
+    {
+      "id": "freelancer-2",
+      "title": "Freelancer — Web Developer",
+      "text": "Built websites and systems that helped small businesses solve operational problems with technology.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Freelancer Web development WordPress Client websites"
+    },
+    {
+      "id": "freelancer-3",
+      "title": "Freelancer — Web Developer",
+      "text": "Created and managed WordPress blogs.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "Freelancer Web development WordPress Client websites"
+    },
+    {
+      "id": "role-f5-themes",
+      "title": "F5 Themes — Developer",
+      "text": "Developer at F5 Themes. MAY 2013 — NOV 2014. São Paulo, Brazil. A WordPress e-commerce product serving an international market.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "career",
+      "keywords": "F5 Themes employment history job dates timeline"
+    },
+    {
+      "id": "f5-themes-0",
+      "title": "F5 Themes — Developer",
+      "text": "Developed New-commerce, a WordPress e-commerce theme that reached the top 10 best-sellers on Mojo Themes Market three times.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "F5 Themes WordPress E-commerce Mojo Themes Customer support"
+    },
+    {
+      "id": "f5-themes-1",
+      "title": "F5 Themes — Developer",
+      "text": "Built f5themes.com to support services for customers in Brazil and abroad.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "F5 Themes WordPress E-commerce Mojo Themes Customer support"
+    },
+    {
+      "id": "f5-themes-2",
+      "title": "F5 Themes — Developer",
+      "text": "Supported business strategies that achieved more than 500 global product sales.",
+      "source": "LinkedIn résumé · p. 3",
+      "href": "resume.pdf#page=3",
+      "category": "achievement",
+      "keywords": "F5 Themes WordPress E-commerce Mojo Themes Customer support"
+    },
+    {
+      "id": "f5-themes-3",
+      "title": "F5 Themes — Developer",
+      "text": "Managed clients in Canada, the United States, Taiwan, Italy, India, and Paraguay.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "achievement",
+      "keywords": "F5 Themes WordPress E-commerce Mojo Themes Customer support"
+    },
+    {
+      "id": "role-promobit",
+      "title": "Promobit — Web Developer",
+      "text": "Web Developer at Promobit. NOV 2013 — MAR 2014. São Paulo, Brazil. Web development for the platform’s administration and content.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "career",
+      "keywords": "Promobit employment history job dates timeline"
+    },
+    {
+      "id": "promobit-0",
+      "title": "Promobit — Web Developer",
+      "text": "Developed part of the Promobit administration system using PHP, HTML, CSS, Bootstrap, jQuery, and Git in collaboration with the team.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "achievement",
+      "keywords": "Promobit PHP HTML / CSS Bootstrap jQuery Git"
+    },
+    {
+      "id": "promobit-1",
+      "title": "Promobit — Web Developer",
+      "text": "Developed the Promobit blog, supporting the startup’s marketing strategy.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "achievement",
+      "keywords": "Promobit PHP HTML / CSS Bootstrap jQuery Git"
+    },
+    {
+      "id": "role-pennacorp",
+      "title": "Pennacorp — Intern · IT Technician",
+      "text": "Intern · IT Technician at Pennacorp. SEP 2008 — FEB 2009. São Paulo, Brazil. Early experience in web development, databases, and enterprise software.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "career",
+      "keywords": "Pennacorp employment history job dates timeline"
+    },
+    {
+      "id": "pennacorp-0",
+      "title": "Pennacorp — Intern · IT Technician",
+      "text": "Developed and managed websites in ASP and PHP.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "achievement",
+      "keywords": "Pennacorp ASP PHP ERP Sybase MySQL"
+    },
+    {
+      "id": "pennacorp-1",
+      "title": "Pennacorp — Intern · IT Technician",
+      "text": "Customized and created subroutines in an ERP system.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "achievement",
+      "keywords": "Pennacorp ASP PHP ERP Sybase MySQL"
+    },
+    {
+      "id": "pennacorp-2",
+      "title": "Pennacorp — Intern · IT Technician",
+      "text": "Migrated databases from Sybase to MySQL.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "achievement",
+      "keywords": "Pennacorp ASP PHP ERP Sybase MySQL"
+    },
+    {
+      "id": "pennacorp-3",
+      "title": "Pennacorp — Intern · IT Technician",
+      "text": "Provided ERP system support to clients.",
+      "source": "LinkedIn résumé · p. 4",
+      "href": "resume.pdf#page=4",
+      "category": "achievement",
+      "keywords": "Pennacorp ASP PHP ERP Sybase MySQL"
+    },
+    {
+      "id": "portfolio-1",
+      "title": "AI Shopping Assistant",
+      "text": "A conversation that goes all the way to checkout. An AI sales agent for WooCommerce with product discovery, cart actions, grounded answers, and human handoff.",
+      "source": "Portfolio · AI Shopping Assistant",
+      "href": "#work",
+      "category": "project",
+      "keywords": "AI Shopping Assistant"
+    },
+    {
+      "id": "portfolio-2",
+      "title": "Upskill",
+      "text": "Personalized learning, in the flow of work. An AI platform that finds skill gaps in everyday work and turns them into targeted learning through Slack and Google Workspace.",
+      "source": "Portfolio · Upskill",
+      "href": "#work",
+      "category": "project",
+      "keywords": "Upskill"
+    },
+    {
+      "id": "portfolio-3",
+      "title": "LuminaLLM",
+      "text": "Domain-specific Llama and Mistral training on a single consumer GPU, with QLoRA, experiment tracking, and model evaluation.",
+      "source": "Portfolio · LuminaLLM",
+      "href": "#work",
+      "category": "project",
+      "keywords": "LuminaLLM"
+    },
+    {
+      "id": "portfolio-4",
+      "title": "Nexus RAG",
+      "text": "Enterprise documentation, made answerable. Hybrid retrieval and cross-encoder reranking with an agent that routes each query.",
+      "source": "Portfolio · Nexus RAG",
+      "href": "#work",
+      "category": "project",
+      "keywords": "Nexus RAG"
+    },
+    {
+      "id": "portfolio-5",
+      "title": "MLOps Sentinel",
+      "text": "The path from training to production: automated pipelines, packaged inference, continuous delivery, and observable performance.",
+      "source": "Portfolio · MLOps Sentinel",
+      "href": "#work",
+      "category": "project",
+      "keywords": "MLOps Sentinel"
+    },
+    {
+      "id": "portfolio-6",
+      "title": "About Adam",
+      "text": "I like the space where ambitious ideas become things people can actually use.",
+      "source": "Portfolio · About Adam",
+      "href": "#about",
+      "category": "about",
+      "keywords": "About Adam"
+    },
+    {
+      "id": "portfolio-7",
+      "title": "About Adam",
+      "text": "My work spans AI agents, retrieval systems, machine learning, and the platforms that bring them into production. I work across the stack, from model experimentation to deployment on AWS and Azure.",
+      "source": "Portfolio · About Adam",
+      "href": "#about",
+      "category": "about",
+      "keywords": "About Adam"
+    },
+    {
+      "id": "portfolio-8",
+      "title": "About Adam",
+      "text": "Across my career, I’ve delivered more than 200 projects. At Estudar TI in Brazil, I built AI and web platforms and led technical training reaching over 7,000 students. Today, I’m pursuing an M.S. in Computer Science at the University of the Potomac.",
+      "source": "Portfolio · About Adam",
+      "href": "#about",
+      "category": "about",
+      "keywords": "About Adam"
+    },
+    {
+      "id": "portfolio-9",
+      "title": "OpenTelemetry",
+      "text": "Refactored watcher automation into a shared Python package, removing around 280 duplicated lines. Merged by the maintainers.",
+      "source": "Portfolio · OpenTelemetry",
+      "href": "#opensource",
+      "category": "opensource",
+      "keywords": "OpenTelemetry"
+    },
+    {
+      "id": "portfolio-10",
+      "title": "SynapseKit",
+      "text": "Added LlamaCpp and Cloudflare providers with non-blocking inference and streaming support.",
+      "source": "Portfolio · SynapseKit",
+      "href": "#opensource",
+      "category": "opensource",
+      "keywords": "SynapseKit"
+    },
+    {
+      "id": "portfolio-11",
+      "title": "FAIR",
+      "text": "Built accessible, reusable AI input components and integrated them into the rubric generation experience.",
+      "source": "Portfolio · FAIR",
+      "href": "#opensource",
+      "category": "opensource",
+      "keywords": "FAIR"
+    },
+    {
+      "id": "portfolio-12",
+      "title": "Human Skill Tree",
+      "text": "Created a structured AI/ML learning path with diagnostic assessment, Socratic teaching, and spaced repetition.",
+      "source": "Portfolio · Human Skill Tree",
+      "href": "#opensource",
+      "category": "opensource",
+      "keywords": "Human Skill Tree"
+    },
+    {
+      "id": "portfolio-13",
+      "title": "Contact Adam",
+      "text": "Open to AI engineering roles, consulting, and interesting collaborations.",
+      "source": "Portfolio · Contact Adam",
+      "href": "#contact",
+      "category": "contact",
+      "keywords": "Contact Adam"
+    },
+    {
+      "id": "education-ms",
+      "title": "M.S. in Computer Science",
+      "text": "University of the Potomac. Master of Science in Computer Science, October 2025–April 2027; in progress. GPA: 4.0.",
+      "source": "Portfolio · Education",
+      "href": "#education",
+      "category": "education",
+      "keywords": "master degree university education computer science"
+    },
+    {
+      "id": "education-bs",
+      "title": "Systems Analysis & Information Technology",
+      "text": "Fatec São Caetano do Sul. Bachelor’s degree in Systems Analysis and Information Technology, 2009–2012. GPA: 3.3.",
+      "source": "Portfolio · Education",
+      "href": "#education",
+      "category": "education",
+      "keywords": "bachelor degree education fatec"
+    },
+    {
+      "id": "education-diploma",
+      "title": "Technical Diploma in IT",
+      "text": "Instituto Pentágono de Ensino. Technical training in Information Technology, 2006–2008.",
+      "source": "Portfolio · Education",
+      "href": "#education",
+      "category": "education",
+      "keywords": "diploma education technical school"
+    },
+    {
+      "id": "languages",
+      "title": "Languages",
+      "text": "Portuguese: native or bilingual proficiency. English: native or bilingual proficiency. Spanish: full professional proficiency.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "languages",
+      "keywords": "languages speak fluent idiomas portugues ingles espanhol"
+    },
+    {
+      "id": "authorization",
+      "title": "Work authorization stated in résumé",
+      "text": "The résumé states: “Ready to work under CPT Work Authorization.”",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "authorization",
+      "keywords": "cpt work authorization authorised authorized employment visa sponsorship"
+    },
+    {
+      "id": "profile-overview",
+      "title": "Adam Silva — professional profile",
+      "text": "Adam Silva is an AI engineer with 15+ years of experience and more than 200 projects delivered. His background combines Python, backend systems, cloud deployment, LLM applications, AI agents, RAG, and intelligent automation. Technical products and training have reached 7,000+ students.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "overview",
+      "keywords": "who background biography overview introduction years experience summary"
+    },
+    {
+      "id": "location",
+      "title": "Location",
+      "text": "Adam’s contact location is Silver Spring, Maryland, USA. His LinkedIn profile lists the Washington, District of Columbia area.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "contact",
+      "keywords": "based live city country address location maryland washington dc"
+    },
+    {
+      "id": "email",
+      "title": "Email and professional links",
+      "text": "Email: adaumsilva@gmail.com. LinkedIn: https://www.linkedin.com/in/adam-silva/. Portfolio: https://adaumsilva.github.io/. GitHub: https://github.com/adaumsilva.",
+      "source": "Portfolio · Contact",
+      "href": "#contact",
+      "category": "contact",
+      "keywords": "email contact github linkedin reach hire"
+    },
+    {
+      "id": "phone",
+      "title": "Phone listed in résumé",
+      "text": "Mobile number as listed in the résumé: +1 202 469 219 2.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "contact",
+      "keywords": "phone telephone mobile number call telefone"
+    },
+    {
+      "id": "certifications-resume",
+      "title": "Certifications listed in résumé",
+      "text": "Generative AI and LLMs: Architecture and Data Preparation; Generative AI Applications with Amazon Bedrock; Machine Learning with Python; Fundamentals of AI Agents Using RAG and LangChain; TOEFL iBT.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "certification",
+      "keywords": "certifications credentials certificates toefl courses training"
+    },
+    {
+      "id": "toolkit",
+      "title": "Engineering toolkit",
+      "text": "AI: Python, PyTorch, TensorFlow, Hugging Face, LangChain, and LangGraph. Infrastructure: AWS Bedrock, Azure AI Foundry, Google Cloud, Docker, and Linux. Product: React, Next.js, JavaScript, REST APIs, PostgreSQL, and MySQL.",
+      "source": "Portfolio · Toolkit",
+      "href": "#toolkit",
+      "category": "skills",
+      "keywords": "skills technologies programming languages frameworks tech stack tools"
+    },
+    {
+      "id": "profile-skills",
+      "title": "Top skills listed on LinkedIn",
+      "text": "Claude Code Subagents, CodeIgniter, and TypeScript.",
+      "source": "LinkedIn résumé · p. 1",
+      "href": "resume.pdf#page=1",
+      "category": "skills",
+      "keywords": "skills technologies tech stack"
+    },
+    {
+      "id": "archive-youtube",
+      "title": "YouTube Comment Fetcher",
+      "text": "2024 project that fetches YouTube comments and turns them into articles and video scripts. Repository: https://github.com/adaumsilva/youtube-comment-fetcher.",
+      "source": "Portfolio · Experiments",
+      "href": "#archive",
+      "category": "project",
+      "keywords": "youtube comments fetcher scripts openai heygen"
+    },
+    {
+      "id": "archive-wordpress",
+      "title": "WP Comment Responder",
+      "text": "2024 WordPress project for automated comment replies with GPT-4o-mini. Repository: https://github.com/adaumsilva/wp-comment-responder.",
+      "source": "Portfolio · Experiments",
+      "href": "#archive",
+      "category": "project",
+      "keywords": "wordpress comment responder gpt openai"
+    },
+    {
+      "id": "shopping-stack",
+      "title": "AI Shopping Assistant",
+      "text": "A production AI sales agent for WooCommerce. Natural-language catalog search, cart actions, checkout in chat, document-grounded RAG answers, and human takeover from the admin inbox. Stack: WordPress, WooCommerce, PHP, JavaScript, OpenAI, tool calling, RAG, and REST APIs. Live demo: https://store.f5digitalmarketing.com.",
+      "source": "Portfolio · AI Shopping Assistant",
+      "href": "#work",
+      "category": "project",
+      "keywords": "shopping sales commerce product catalog cart checkout technology stack tools openai"
+    },
+    {
+      "id": "upskill-stack",
+      "title": "Upskill",
+      "text": "An AI learning platform integrated with Slack and Google Workspace that detects skill gaps and provides personalized learning interventions. Its dual-model pipeline uses Llama 4 and GPT-5 on Microsoft Azure Foundry. Stack: Next.js, FastAPI, PostgreSQL, Python, TypeScript, and Azure Foundry.",
+      "source": "Portfolio · Upskill",
+      "href": "#work",
+      "category": "project",
+      "keywords": "learning education slack workspace technology stack models llama gpt"
+    },
+    {
+      "id": "lumina-stack",
+      "title": "LuminaLLM",
+      "text": "A fine-tuning framework for domain-specific Llama 3 and Mistral models using QLoRA and PEFT. Four-bit NF4 quantization reduces VRAM usage by 75%, supporting training on a single consumer GPU. Includes Weights & Biases experiment tracking and evaluation with perplexity, ROUGE, and LLM-as-judge. Stack: Python, PyTorch, Hugging Face, QLoRA, PEFT, CUDA, and W&B. Repository: https://github.com/adaumsilva/LuminaLLM.",
+      "source": "Portfolio · LuminaLLM",
+      "href": "#work",
+      "category": "project",
+      "keywords": "fine tuning finetuning llama mistral vram gpu technology stack evaluation"
+    },
+    {
+      "id": "nexus-stack",
+      "title": "Nexus RAG",
+      "text": "An agentic RAG system combining ChromaDB vector search and BM25 with cross-encoder reranking. A LangGraph agent routes queries between the internal knowledge base and GPT-4 or Claude 3.5. Stack: Python, LangChain, LangGraph, FastAPI, ChromaDB, OpenAI, Anthropic, and BM25. Repository: https://github.com/adaumsilva/nexus-rag.",
+      "source": "Portfolio · Nexus RAG",
+      "href": "#work",
+      "category": "project",
+      "keywords": "rag hybrid retrieval reranking vector knowledge technology stack architecture"
+    },
+    {
+      "id": "mlops-stack",
+      "title": "MLOps Sentinel",
+      "text": "An MLOps template covering automated training, model serialization, FastAPI inference, multi-stage Docker packaging, GitHub Actions CI/CD, and Prometheus latency and throughput metrics. Stack: Python, FastAPI, Docker, GitHub Actions, Prometheus, scikit-learn, XGBoost, and Pytest. Repository: https://github.com/adaumsilva/MLOps-Sentinel.",
+      "source": "Portfolio · MLOps Sentinel",
+      "href": "#work",
+      "category": "project",
+      "keywords": "mlops pipeline machine learning observability monitoring technology stack ci cd"
+    }
+  ]
+}

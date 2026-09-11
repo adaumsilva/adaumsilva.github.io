@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adaumsilva.github.io/sitemap.xml
