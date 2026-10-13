@@ -648,6 +648,15 @@
       "href": "#work",
       "category": "project",
       "keywords": "mlops pipeline machine learning observability monitoring technology stack ci cd"
+    },
+    {
+      "id": "research-rag-overreliance",
+      "title": "Explanations, Evidence, and Overreliance in Retrieval-Augmented Generation: A Critical Literature Review",
+      "text": "Preprint (not peer reviewed) by Adam Silva, University of the Potomac, published October 12, 2026. A critical literature review of explanations, source attribution, and overreliance in retrieval-augmented generation. DOI: https://doi.org/10.5281/zenodo.23328348.",
+      "source": "Portfolio · Research",
+      "href": "#research",
+      "category": "research",
+      "keywords": "research paper publication preprint literature review rag explanations evidence overreliance citation attribution zenodo doi ethics"
     }
   ]
 }

@@ -41,7 +41,7 @@
     step with the animation-range and cubic-bezier values in style.css. */
  // Open source, toolkit, and education move as whole sections so a grid never has its rows at
  // different opacities while it is being read; long sections (work, experience) go item by item.
- const FX_SELECTOR = '.work>.section-heading,.experience>.section-heading,.featured,.project-card,.about-intro,.about-details,.experience-list>details,#opensource,#toolkit,#education,.archive>.eyebrow,.archive>a,.contact-title,.ask-heading,.case-lead,.case-body>*';
+ const FX_SELECTOR = '.work>.section-heading,.experience>.section-heading,.featured,.project-card,.about-intro,.about-details,.experience-list>details,#opensource,#research,#toolkit,#education,.archive>.eyebrow,.archive>a,.contact-title,.ask-heading,.case-lead,.case-body>*';
  const FX_IN_SELECTOR = '.ask-form,.ask-suggestions,.ask-status,.project-gallery';
  const FX_BAND = .4, FX_SHIFT_IN = 56, FX_SHIFT_OUT = 40, FX_BLUR = 14;
  const fxNodes = [...document.querySelectorAll(FX_SELECTOR)];
